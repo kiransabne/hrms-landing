@@ -15,7 +15,9 @@ app.use(express.urlencoded({ extended: false }));
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'ejs');
-
+app.use(logErrors);
+app.use(clientErrorHandler)
+app.use(errorHandler)
 // set path for static assets
 
 
@@ -53,15 +55,37 @@ app.use('/pages', staticpages_router);
 //express error handling
 app.use(function(req, res, next){
   let err = new Error('Not Found');
+  console.log(err);
+  console.error(err.stack)
+
   err.status = 404;
   next(err);
 })
 
 app.use(function(err, req, res, next){
   console.log(err);
+    console.error(err.stack)
   if(err.status === 404){
     res.status(404).json({message:"Not Found"});
   } else {
     res.status(500).json({message:"Something went wrong"});
     }
 })
+
+function logErrors (err, req, res, next) {
+  console.error(err.stack)
+  next(err)
+}
+
+function clientErrorHandler (err, req, res, next) {
+  if (req.xhr) {
+    res.status(500).send({ error: 'Something failed!' })
+  } else {
+    next(err)
+  }
+}
+
+function errorHandler (err, req, res, next) {
+  res.status(500)
+  res.render('error', { error: err })
+}

@@ -6,10 +6,50 @@ module.exports = {
     res.render('contact_page');
   },
 
+  featuresPage: function(req, res, next){
+    res.render('features_page');
+  },
+
   basicFormPage: function(req, res, next){
     console.log('hit form')
     res.render('basicform');
   },
+
+  testform: function(req, res, next){
+    console.log(req.body)
+
+    res.render('testform');
+
+  },
+
+  submi: function(req, res, next){
+    console.log(req.body)
+    console.log(req.body);
+    req.app.locals.postdb.query('insert into demo_request (first_name, last_name, company_name, email, mobile, employee_count) values ($1, $2, $3, $4, $5, $6)'
+                                ,[req.body.firstname, req.body.lastname, req.body.companyname, req.body.email, req.body.mobile, req.body.employeecount], async function(err, result){
+                                  if (err){
+                                    console.log(err);
+                                  } else {
+                                    let ans = await result;
+                                    console.log(ans.rowCount);
+                                    if (ans.rowCount == 1){
+                                      res.render('contact_page');
+                                    } else{
+                                      res.send("Error");
+                                    }
+
+                                  //  console.log('ddgffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff');
+                                    //res.render('features_page');
+
+
+                                }
+
+                                })
+  //  res.render('contact_page');
+  },
+
+
+  ///pages/submit-form
 
   // .not().isEmpty()
   // .trim()
@@ -42,12 +82,21 @@ module.exports = {
                                     console.log(err);
                                   } else {
                                     let ans = await result;
-                                    console.log(result);
-                                    console.log('ddgffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff');
+                                    console.log(ans.rowCount);
+                                    if (ans.rowCount == 1){
+                                      res.render('contact_page');
+                                    } else{
+                                      res.send("Error");
+                                    }
 
-return res.redirect('/contact-us');                                  }
+                                  //  console.log('ddgffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff');
+                                    //res.render('features_page');
+
+
+                                }
 
                                 })
+
 
   }
 }

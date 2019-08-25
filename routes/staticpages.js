@@ -8,7 +8,11 @@ const validationResult = require('express-validator').validationResult;
 
 router.get('/contact-us', staticpagesController.contactPage);
 router.get('/basicform', staticpagesController.basicFormPage);
-router.post('/submit-form', staticpagesController.submitform)
+//router.post('/submit-form', staticpagesController.submitform);
+router.get('/features', staticpagesController.featuresPage);
+router.get('/demo_form', staticpagesController.testform);
+router.post('/submi', staticpagesController.submi);
+
 module.exports = router;
 //
 // app.post('/form',
