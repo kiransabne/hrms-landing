@@ -18,7 +18,7 @@ module.exports = {
   testform: function(req, res, next){
     console.log(req.body)
 
-    res.render('testform');
+    res.render('testform',{don: 0});
 
   },
 
@@ -33,7 +33,8 @@ module.exports = {
                                     let ans = await result;
                                     console.log(ans.rowCount);
                                     if (ans.rowCount == 1){
-                                      res.render('contact_page');
+                                      var data = {submitted: ans.rowCount};
+                                      res.render('testform', {don: ans.rowCount});
                                     } else{
                                       res.send("Error");
                                     }

@@ -15,6 +15,20 @@
 .txt-yellow{color: #fc8d00;}
 .txt-red{color: #f62624;}
 .txt-pink{color: #d59c89;}
+.btn-green{
+	color: #fff;
+    background-color: #24c287;
+    border-color: #24c287;
+}
+.btn-green:hover {
+	    color: #fff;
+    background-color: #f5281f;
+    border-color: #f5281f;
+}
+.btn-green:focus{
+	box-shadow: 0 0 0 0.2rem rgb(167, 255, 222);
+}
+}
 /*CUSTOM CLASS*/
 
 
