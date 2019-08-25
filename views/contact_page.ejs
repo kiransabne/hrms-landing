@@ -1,1 +1,54 @@
-<<h1>contactPage</h1>
+<% include ./partials/header %>
+
+
+
+	<div class="container-fluid mb-5">
+			<div class="col-12 px-5">
+				<!--First Division-->
+				<h1 class="mt-5 pr-5 f-30 txt-gray">Lorem ipsum dolor sit amet</h1>
+				<p class="txt-gray">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				<hr/>
+				<div class="row">
+				<div class="col-md-6">
+				<form>
+					<div class="form-row">
+					<div class="form-group col-md-6">
+						<label class="font-weight-bold" for="first_name">First Name:</label>
+						<input type="text" class="form-control" id="first_name" name="first_name" placeholder="First Name" required="">
+					</div>
+					<div class="form-group col-md-6">
+						<label class="font-weight-bold" for="last_name">Last Name:</label>
+						<input type="text" class="form-control" id="last_name" name="last_name" placeholder="Last Name" required="">
+					</div>
+					<div class="form-group col-md-6">
+						<label class="font-weight-bold" for="company_name">Company Name:</label>
+						<input type="text" class="form-control" id="company_name" name="company_name" placeholder="Company Name" required="">
+					</div>
+					<div class="form-group col-md-6">
+						<label class="font-weight-bold" for="email_id">Email:</label>
+						<input type="email" class="form-control" id="email_id" name="email_id" placeholder="Email Id" required="">
+					</div>
+					<div class="form-group col-md-6">
+						<label class="font-weight-bold" for="email_sub">Subject:</label>
+						<input type="text" class="form-control" id="email_sub" name="email_sub" placeholder="Subject" required="">
+					</div>
+					<div class="form-group col-md-6">
+						<label class="font-weight-bold" for="mobile_no">Mobile No:</label>
+						<input type="number" class="form-control" id="mobile_no" name="mobile_no" placeholder="Mobile Number" required="">
+					</div>
+					<div class="form-group col-12">
+						<label class="font-weight-bold" for="query">Your Query:</label>
+						<textarea class="w-100" rows="3"></textarea>
+					</div>
+				</div>
+				<button class="btn btn-green mt-3 w-100">Submit Query</button>
+				</form>
+			</div>
+			<div class="col-md-6">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.9605268357873!2d73.00029241437669!3d19.065473057258842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c141ab13e10d%3A0xa762a277d6a72ccc!2sSpiderweaves%20-%20Website%20Designer%2C%20Developer%20%26%20SEO%20promoter!5e0!3m2!1sen!2sin!4v1566730613606!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+			</div>
+			</div>
+			</div>
+	</div>
+
+<% include ./partials/footer %>

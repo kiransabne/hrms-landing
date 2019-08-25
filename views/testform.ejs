@@ -1,5 +1,5 @@
 <% include ./partials/header %>
-<div class="container-fluid">
+<!-- <div class="container-fluid">
 
   <form method="POST" action="/pages/submi">
     <div class="form-group">
@@ -34,5 +34,55 @@
       <input type="submit" />
   </form>
 
+</div> -->
+
+<div class="container-fluid">
+    <div class="col-12 px-5">
+      <!--First Division-->
+      <h1 class="mt-5 pr-5 f-30 txt-gray">Lorem ipsum dolor sit amet</h1>
+      <p class="txt-gray">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <hr/>
+      <div class="row">
+            <div class="col-md-6">
+      <img src="/images/bg1.jpg"/>
+    </div>
+      <div class="col-md-6">
+        <form method="POST" action="/pages/submi">
+          <div class="form-group">
+            <label for="firstname">First Name</label>
+            <input type="text" class="form-control" id="firstname" placeholder="First Name" name="firstname" required="true">
+          </div>
+
+          <div class="form-group">
+            <label for="lastname">Last Name</label>
+            <input type="text" class="form-control" id="lastname" placeholder="Last Name" name="lastname" required="true">
+          </div>
+
+          <div class="form-group">
+            <label for="companyname">Company Name</label>
+            <input type="text" class="form-control" id="companyname" placeholder="Company Name" name="companyname" required="true">
+          </div>
+
+          <div class="form-group">
+            <label for="email">Your Contact Email-Id</label>
+            <input type="email" class="form-control" id="email" placeholder="Your Email" name="email" required="true">
+          </div>
+
+          <div class="form-group">
+            <label for="mobile">Your Contact Mobile number</label>
+            <input type="text" class="form-control" id="mobile" placeholder="Contact Number" name="mobile" required="true">
+          </div>
+
+          <div class="form-group">
+            <label for="employeecount">Your Company Employee Count(Approx)</label>
+            <input type="text" class="form-control" id="employeecount" placeholder="Number of Employee(Approx)" name="employeecount" required="true">
+          </div>
+            <input type="submit" />
+        </form>
+    </div>
+    </div>
+    </div>
 </div>
+
+
 <% include ./partials/footer %>
