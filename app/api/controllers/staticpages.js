@@ -6,6 +6,57 @@ module.exports = {
     res.render('contact_page');
   },
 
+  employeeSelfServiceFeaturePage: function(req, res, next){
+    res.render('features/employeeselfservice')
+  },
+
+  attendanceManagementFeaturePage: function(req, res, next){
+    res.render('features/attendancemanagementpage')
+  },
+
+  leaveManagemetFeaturePage: function(req, res, next){
+    res.render('features/leavemanagementpage')
+  },
+
+  employeedirectoryfeaturepage: function(req, res, next){
+    res.render('features/employeedirectorypage')
+  },
+
+  claimmanagementfeaturepage: function(req, res, next){
+    res.render('features/claimmanagementpage')
+  },
+
+  payrollmanagementfeaturepage: function(req, res, next){
+    res.render('features/payrollmanagementpage')
+
+  },
+
+  travelmanagementfeaturepage: function(req, res, next){
+    res.render('features/travelandodmanagement')
+  },
+
+  trainingmanagementfeaturepage: function(req, res, next){
+    res.render('features/trainingmanagementpage')
+  },
+
+  processautomationfeaturepage: function(req, res, next){
+    res.render('features/processautomationmanagementpage')
+
+  },
+
+  employeedocumentfeaturepage: function(req, res, next){
+    res.render('features/employeedocmanagement')
+  },
+
+  performancemanagementfeaturepage: function(req, res, next){
+    res.render('features/performancemanagement')
+  },
+
+  mobileapplicationfeaturepage: function(req, res, next){
+    res.render('features/mobileapplicationpage')
+
+  },
+
   featuresPage: function(req, res, next){
     res.render('features_page');
   },

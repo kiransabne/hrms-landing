@@ -116,3 +116,7 @@ header {
 		display: none;
 	}
 }
+
+.list-group-item.txt-gray {
+    color: black;
+}
